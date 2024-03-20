@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block main %}
+<h1>Add New Property</h1>
+{% include 'flash_messages.html' %}
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="label">
+        {{ form.title.label }}<br>
+        {{ form.title(size=50) }}
+    </div>
+    <div class="label">
+        {{ form.description.label }}<br>
+        {{ form.description }}
+    </div>
+    <div id="flexy">
+        <div class="label">
+            {{ form.bedrooms.label }}<br>
+            {{ form.bedrooms }}
+        </div>
+        <div class="label">
+            {{ form.bathrooms.label }}<br>
+            {{ form.bathrooms }}
+        </div>
+        <div class="label">
+            {{ form.price.label }}<br>
+            {{ form.price }}
+        </div>
+        <div class="label">
+            {{ form.type.label }}<br>
+            {{ form.type }}
+        </div>
+    </div>
+    <div class="label">
+        {{ form.location.label }}<br>
+        {{ form.location(size=50) }}
+    </div>
+    <div class="label">
+        {{ form.photo.label }}<br>
+        {{ form.photo }}
+    </div>
+    <div class="label">
+        <input type="submit" value="Add Property"
+    </div>
+</form>
+{% endblock %}
